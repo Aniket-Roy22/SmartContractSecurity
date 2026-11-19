@@ -1,0 +1,194 @@
+
+.scs-left-column {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	width: 100%;
+}
+
+/* Upload Card */
+.scs-upload-card {
+	padding: 26px;
+	border: 1px solid #dce3ec;
+	border-radius: 10px;
+	background: #ffffff;
+	box-shadow: 0 2px 8px rgba(15, 23, 42, 0.035);
+}
+
+.scs-upload-heading h3 {
+	margin: 0 0 8px;
+	font-size: 19px;
+	font-weight: 650;
+	color: #172033;
+}
+
+.scs-upload-heading p {
+	margin: 0 0 24px;
+	font-size: 13px;
+	line-height: 1.6;
+	color: #64748b;
+}
+
+/* Upload Area */
+.scs-upload-trigger {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	min-height: 190px;
+	padding: 24px;
+	border: 1.5px dashed #aab8ca;
+	border-radius: 8px;
+	background: #f8fafc;
+	cursor: pointer;
+	transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.scs-upload-trigger:hover,
+.scs-upload-trigger.dragging {
+	border-color: #416a9e;
+	background: #f1f5f9;
+}
+
+.scs-upload-trigger:focus-visible {
+	outline: 2px solid #416a9e;
+	outline-offset: 3px;
+}
+
+.scs-upload-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	border-radius: 8px;
+	border: 1.5px solid #172033;
+	background: #eaf0f7;
+	color: #315b8a;
+}
+
+.scs-upload-text {
+	font-size: 14px;
+	font-weight: 600;
+	color: #26364b;
+}
+
+.scs-upload-subtext {
+	font-size: 12px;
+	color: #8492a6;
+}
+
+/* Selected File */
+.scs-file-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-top: 16px;
+	padding: 12px;
+	border: 1px solid #dce3ec;
+	border-radius: 8px;
+	background: #ffffff;
+}
+
+.scs-file-info {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	min-width: 0;
+}
+
+.scs-file-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	width: 42px;
+	height: 42px;
+	border-radius: 6px;
+	background: #edf2f8;
+	color: #315b8a;
+	font-size: 11px;
+	font-weight: 700;
+}
+
+.scs-file-details {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	min-width: 0;
+}
+
+.scs-file-name {
+	overflow: hidden;
+	font-size: 13px;
+	font-weight: 600;
+	color: #334155;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.scs-file-size {
+	font-size: 11px;
+	color: #94a3b8;
+}
+
+/* Change File */
+.scs-change-btn {
+	padding: 7px 12px;
+	border: 1px solid #cbd5e1;
+	border-radius: 5px;
+	background: #ffffff;
+	color: #475569;
+	font-size: 12px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.scs-change-btn:hover {
+	background: #f1f5f9;
+}
+
+/* Analyze Button */
+.scs-analyze-btn {
+	width: 100%;
+	padding: 14px;
+	border: 1px solid #263f60;
+	border-radius: 7px;
+	background: #263f60;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.scs-analyze-btn:hover:not(:disabled) {
+	background: #1c304b;
+	border-color: #1c304b;
+}
+
+.scs-analyze-btn:focus-visible,
+.scs-change-btn:focus-visible {
+	outline: 2px solid #416a9e;
+	outline-offset: 3px;
+}
+
+.scs-analyze-btn:disabled {
+	background: #cbd5e1;
+	border-color: #cbd5e1;
+	color: #ffffff;
+	cursor: not-allowed;
+}
+
+@media (max-width: 540px) {
+	.scs-upload-card {
+		padding: 20px;
+	}
+
+	.scs-upload-trigger {
+		min-height: 160px;
+	}
+}

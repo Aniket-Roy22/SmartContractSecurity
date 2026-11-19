@@ -1,195 +1,71 @@
-/* Header & Footer */
-.scs-header {
-  background-color: #0f172a;
-  color: #ffffff;
-  padding: 1rem 2rem;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.15rem;
-  border-bottom: 1px solid #1e293b;
-}
-
-.scs-footer {
-  background-color: #0f172a;
-  color: #94a3b8;
-  text-align: center;
-  padding: 0.9rem;
-  font-size: 0.875rem;
-  margin-top: auto;
-}
-
-/* Main Page Layout */
+/* Main Page */
 .scs-page-container {
-  max-width: 1120px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  flex: 1;
+	width: 100%;
+	max-width: 1360px;
+	margin: 0 auto;
+	padding: 38px 48px 56px;
+	flex: 1;
 }
 
+/* Page Introduction */
 .scs-title-section {
-  margin-bottom: 2rem;
+	margin-bottom: 30px;
 }
 
 .scs-title-section h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 0.4rem;
+	margin: 0 0 10px;
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: -0.8px;
+	line-height: 1.25;
+	color: #172033;
 }
 
 .scs-title-section p {
-  color: #475569;
-  font-size: 1rem;
+	max-width: 900px;
+	margin: 0;
+	font-size: 15px;
+	line-height: 1.7;
+	color: #64748b;
 }
 
-/* Side-by-Side Two-Column Grid */
+/* Main Workspace */
 .scs-workspace {
-  display: grid;
-  grid-template-columns: 1.35fr 1fr;
-  gap: 1.5rem;
-  align-items: stretch;
+	display: grid;
+	grid-template-columns: 1.2fr 0.9fr;
+	gap: 24px;
+	align-items: stretch;
+}
+
+.scs-footer {
+	background-color: #0f172a;
+	color: #94a3b8;
+	text-align: center;
+	padding: 18px;
+	font-size: 13px;
+	margin-top: auto;
+}
+
+@media (max-width: 900px) {
+	.scs-page-container {
+		padding: 30px 24px 40px;
+	}
+
+	.scs-workspace {
+		grid-template-columns: 1fr;
+	}
 }
 
 @media (max-width: 540px) {
-  .scs-workspace {
-    grid-template-columns: 1fr;
-  }
-}
+	.scs-page-container {
+		padding: 24px 16px 32px;
+	}
 
-/* Left Column: Upload Box + Analyze Button */
-.scs-left-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
-}
+	.scs-title-section h1 {
+		font-size: 24px;
+	}
 
-.scs-upload-card {
-  background-color: #ffffff;
-  border: 2px solid #cbd5e1;
-  border-radius: 10px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  flex: 1;
-}
-
-.scs-upload-trigger {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  padding: 0.9rem 1rem;
-  background-color: #f1f5f9;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.scs-upload-trigger:hover {
-  background-color: #e2e8f0;
-}
-
-.scs-upload-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  border: 1.5px solid #0f172a;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 0.95rem;
-}
-
-.scs-upload-text {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #0f172a;
-}
-
-/* Dashed Box for pdf_name & Change File */
-.scs-file-row {
-  border: 2px dashed #94a3b8;
-  border-radius: 8px;
-  padding: 0.9rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  background-color: #f8fafc;
-}
-
-.scs-file-name {
-  font-size: 0.95rem;
-  color: #334155;
-}
-
-.scs-change-btn {
-  padding: 0.4rem 0.85rem;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #0f172a;
-  background-color: #e2e8f0;
-  border: 1px solid #94a3b8;
-  border-radius: 6px;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background-color 0.2s ease;
-}
-
-.scs-change-btn:hover {
-  background-color: #cbd5e1;
-}
-
-/* Analyze Button */
-.scs-analyze-btn {
-  width: 100%;
-  padding: 0.95rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #ffffff;
-  background-color: #2563eb;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.scs-analyze-btn:hover {
-  background-color: #1d4ed8;
-}
-
-/* Right Column: Result Box */
-.scs-right-column {
-  background-color: #ffffff;
-  border: 2px solid #cbd5e1;
-  border-radius: 10px;
-  padding: 1.5rem;
-  min-height: 280px;
-  display: flex;
-  flex-direction: column;
-}
-
-.scs-result-header {
-  border-bottom: 1px solid #e2e8f0;
-  padding-bottom: 0.6rem;
-  margin-bottom: 1rem;
-}
-
-.scs-result-header h3 {
-  font-size: 1.1rem;
-  color: #0f172a;
-}
-
-.scs-result-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.scs-muted-text {
-  color: #64748b;
-  font-size: 0.95rem;
+	.scs-title-section p {
+		font-size: 14px;
+	}
 }

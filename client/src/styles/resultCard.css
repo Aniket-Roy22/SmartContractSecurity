@@ -1,0 +1,36 @@
+.scs-right-column {
+	width: 100%;
+	min-height: auto;
+	padding: 26px;
+	border: 1px solid #dce3ec;
+	border-radius: 10px;
+	background: #ffffff;
+	box-shadow: 0 2px 8px rgba(15, 23, 42, 0.035);
+}
+
+.scs-result-content {
+	width: 100%;
+}
+
+.scs-result-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 16px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #e2e8f0;
+}
+
+.scs-result-header h3 {
+	margin: 0;
+	font-size: 19px;
+	font-weight: 650;
+	color: #172033;
+}
+
+@media (max-width: 540px) {
+	.scs-right-column {
+		min-height: 300px;
+		padding: 20px;
+	}
+}

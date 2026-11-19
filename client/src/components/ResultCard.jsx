@@ -1,17 +1,19 @@
-const ResultCard = () => {
-  return (
-    <div className="scs-right-column">
-      <div className="scs-result-header">
-        <h3>Result</h3>
-      </div>
+import "../styles/resultCard.css";
 
-      <div className="scs-result-body">
-        <p className="scs-muted-text">
-          Upload a PDF and click Analyze to view security results here.
-        </p>
-      </div>
-    </div>
-  );
+const ResultCard = ({results}) => {
+	return (
+		<div className="scs-right-column">
+			{results && (
+				<div className="scs-result-content">
+					<div className="scs-result-header">
+						<h3>Security Analysis Report</h3>
+					</div>
+
+					{/* Analysis results will be rendered here */}
+				</div>
+			)}
+		</div>
+	);
 };
 
 export default ResultCard;
