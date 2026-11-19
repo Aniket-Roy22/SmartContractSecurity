@@ -1,0 +1,71 @@
+/* Main Page */
+.scs-page-container {
+	width: 100%;
+	max-width: 1360px;
+	margin: 0 auto;
+	padding: 38px 48px 56px;
+	flex: 1;
+}
+
+/* Page Introduction */
+.scs-title-section {
+	margin-bottom: 30px;
+}
+
+.scs-title-section h1 {
+	margin: 0 0 10px;
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: -0.8px;
+	line-height: 1.25;
+	color: #172033;
+}
+
+.scs-title-section p {
+	max-width: 900px;
+	margin: 0;
+	font-size: 15px;
+	line-height: 1.7;
+	color: #64748b;
+}
+
+/* Main Workspace */
+.scs-workspace {
+	display: grid;
+	grid-template-columns: 1.2fr 0.9fr;
+	gap: 24px;
+	align-items: stretch;
+}
+
+.scs-footer {
+	background-color: #0f172a;
+	color: #94a3b8;
+	text-align: center;
+	padding: 18px;
+	font-size: 13px;
+	margin-top: auto;
+}
+
+@media (max-width: 900px) {
+	.scs-page-container {
+		padding: 30px 24px 40px;
+	}
+
+	.scs-workspace {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 540px) {
+	.scs-page-container {
+		padding: 24px 16px 32px;
+	}
+
+	.scs-title-section h1 {
+		font-size: 24px;
+	}
+
+	.scs-title-section p {
+		font-size: 14px;
+	}
+}

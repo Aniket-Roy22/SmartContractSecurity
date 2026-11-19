@@ -1,0 +1,108 @@
+.scs-header {
+	width: 100%;
+	min-height: 72px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #e5e7eb;
+	background-color: #0f172a;
+}
+
+.scs-header-inner {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.scs-brand {
+	display: flex;
+	align-items: center;
+	gap: 11px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.scs-brand-icon {
+	width: 25px;
+	height: 25px;
+	flex-shrink: 0;
+	color: white;
+}
+
+.scs-brand-text {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.scs-logo {
+	font-size: 18px;
+	font-weight: 650;
+	letter-spacing: -0.5px;
+	line-height: 1.2;
+	color: white;
+}
+
+.scs-logo span {
+	font-weight: 400;
+	color: #77818f;
+}
+
+.scs-brand-caption {
+	font-size: 9px;
+	font-weight: 600;
+	letter-spacing: 1.2px;
+	color: #94a3b8;
+}
+
+.scs-header-tagline {
+	font-size: 12px;
+	font-weight: 400;
+	color: #64748b;
+}
+
+.scs-header-status {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 10px;
+	border: 1px solid #e2e8f0;
+	border-radius: 4px;
+	color: #475569;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.scs-status-dot {
+	width: 7px;
+	height: 7px;
+	flex-shrink: 0;
+	border-radius: 50%;
+	background: #16a34a;
+}
+
+@media (max-width: 600px) {
+	.scs-header {
+		min-height: 64px;
+	}
+
+	.scs-header-inner {
+		padding: 0 18px;
+	}
+
+	.scs-logo {
+		font-size: 16px;
+	}
+
+	.scs-header-tagline {
+		display: none;
+	}
+
+	.scs-header-status {
+		padding: 6px 8px;
+		font-size: 11px;
+	}
+}
