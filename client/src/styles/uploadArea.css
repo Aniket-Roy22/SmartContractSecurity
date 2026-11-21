@@ -1,9 +1,9 @@
-
 .scs-left-column {
 	display: flex;
 	flex-direction: column;
 	gap: 18px;
 	width: 100%;
+	min-height: auto;
 }
 
 /* Upload Card */
