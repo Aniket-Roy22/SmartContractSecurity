@@ -1,9 +1,10 @@
+import {useState} from "react";
 import SmartContractUploader from "../components/SolUploader";
 import ResultCard from "../components/ResultCard";
 import "../styles/analyzer.css";
 
 const AnalyzerPage = () => {
-	const result = "to be analyzed";
+	const [result, setResult] = useState("no file uploaded");
 
 	return (
 		<main className="scs-page-container">
@@ -17,7 +18,7 @@ const AnalyzerPage = () => {
 			</section>
 
 			<section className="scs-workspace">
-				<SmartContractUploader />
+				<SmartContractUploader setResult={setResult}/>
 				<ResultCard results={result}/>
 			</section>
 		</main>

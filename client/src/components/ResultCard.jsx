@@ -9,7 +9,9 @@ const ResultCard = ({results}) => {
 						<h3>Security Analysis Report</h3>
 					</div>
 
-					{/* Analysis results will be rendered here */}
+					<div>
+						<pre>{JSON.stringify(results, null, 2)}</pre>
+					</div>
 				</div>
 			)}
 		</div>

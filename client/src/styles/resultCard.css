@@ -6,6 +6,7 @@
 	border-radius: 10px;
 	background: #ffffff;
 	box-shadow: 0 2px 8px rgba(15, 23, 42, 0.035);
+	overflow-x: scroll;
 }
 
 .scs-result-content {

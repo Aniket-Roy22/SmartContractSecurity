@@ -1,11 +1,13 @@
 import {useRef, useState} from "react";
+import {analyzeContract} from "../api/analysis";
 import "../styles/uploadArea.css";
 
-const SolUploader = () => {
+const SolUploader = ({setResult}) => {
 	const fileInputRef = useRef(null);
 	const [selectedFile, setSelectedFile] = useState(null);
 	const [isDragging, setIsDragging] = useState(false);
-	const [isUploading, setIsUploading] = useState(false);
+	const [isLoading, setLoading] = useState(false);
+	const [error, setError] = useState(null);
 
 	const handleFile = (file) => {
 		if (!file) return;
@@ -18,7 +20,47 @@ const SolUploader = () => {
 		setSelectedFile(file);
 	};
 
-	// const handleAnalyze = async () => {}
+	const handleAnalyze = async () => {
+		if (!selectedFile)
+		{
+			setError("Please select a Solidity file first.");
+			return;
+		}
+
+		if (!selectedFile.name.toLowerCase().endsWith(".sol"))
+		{
+			setError("Only Solidity files are allowed.");
+			return;
+		}
+
+		const formData = new FormData();
+		formData.append("contract", selectedFile);
+
+		try
+		{
+			setLoading(true);
+			setError("");
+			setResult(null);
+
+			const response = await analyzeContract(formData);
+			console.log("response", response.data);
+
+			setResult(response.data);
+		}
+		catch (err)
+		{
+			setError(
+				err.response?.data?.message ||
+					"An error occurred while analyzing the contract.",
+			);
+
+			console.error(err);
+		}
+		finally
+		{
+			setLoading(false);
+		}
+	};
 
 	const handleDrop = (e) => {
 		e.preventDefault();
@@ -120,8 +162,8 @@ const SolUploader = () => {
 			<button
 				type="button"
 				className="scs-analyze-btn"
-				disabled={!selectedFile || isUploading}
-				// onClick={handleAnalyze}
+				disabled={!selectedFile || isLoading}
+				onClick={handleAnalyze}
 			>
 				Analyze Contract
 			</button>
