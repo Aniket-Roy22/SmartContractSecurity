@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-dotenv
+pandas
+langchain
+langchain-community
+langchain-text-splitters
+langchain-chroma
+langchain-huggingface
+chromadb
+sentence-transformers
+grpcio==1.71.0
+scipy==1.15.3
